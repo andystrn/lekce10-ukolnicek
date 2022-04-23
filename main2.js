@@ -20,6 +20,8 @@ ukoly = [
 */
 
 // ihned po načtení stránky zavoláme funkci,
+zobrazUkoly();
+
 // která přečte seznam úkolů z Local Storage
 nactiUkoly();
 
