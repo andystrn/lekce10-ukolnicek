@@ -102,6 +102,4 @@ function pridejUkol() {
 	ukoly.push(ukol);
 
 	ulozUkoly();
-
-	zobrazUkoly();
 }
