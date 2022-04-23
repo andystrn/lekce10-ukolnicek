@@ -24,7 +24,7 @@ ukoly = [
 nactiUkoly();
 
 // a hned seznam úkolů zobrazíme
-
+zobrazUkoly();
 
 
 // funkce pro načtení seznamu úkolů z Local Storage
@@ -68,7 +68,7 @@ function vytvorPrvekUkolu(index, popis, dulezitost) {
     let buttonElement = document.createElement('button');
     buttonElement.textContent = 'x';
     buttonElement.dataset.index = index;
-    buttonElement.onclick = odstranUkol();
+    buttonElement.onclick = odstranUkol;
 
     liElement.appendChild(buttonElement);
 
@@ -78,8 +78,14 @@ function vytvorPrvekUkolu(index, popis, dulezitost) {
 
 // funkce pro smazání úúkolu při kliknutí na tlačítko "x" vedle popisu úkolu
 function odstranUkol() {
-    
+    console.log(this.dataset.index);
+    let index = this.dataset.index;
+    ukoly.splice(index, 1);
+
+    ulozUkoly();
+    zobrazUkoly();
 }
+
 // funkce pro přidání úkolu do seznamu
 function pridejUkol() {
     let popis = document.querySelector('#popis').value;
