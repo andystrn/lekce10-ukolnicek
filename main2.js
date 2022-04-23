@@ -28,7 +28,6 @@ nactiUkoly();
 // a hned seznam úkolů zobrazíme
 zobrazUkoly();
 
-
 // funkce pro načtení seznamu úkolů z Local Storage
 function nactiUkoly() {
     console.log(' call of nactiUkoly');
@@ -41,8 +40,6 @@ function nactiUkoly() {
     }
 }
 	
-
-
 // funkce pro uložení seznamu úkolů do Local Storage
 function ulozUkoly() {
     localStorage.ukoly = JSON.stringify(ukoly);
@@ -60,7 +57,6 @@ function zobrazUkoly() {
     }
 }
 
-
 // funkce, která vytvoří HTML prvky jednoho úkolu
 // jako parametry očekává index úkolu v poli, popis a důležitost úkolu
 function vytvorPrvekUkolu(index, popis, dulezitost) {
@@ -76,7 +72,6 @@ function vytvorPrvekUkolu(index, popis, dulezitost) {
 
     return liElement;
 }
-
 
 // funkce pro smazání úúkolu při kliknutí na tlačítko "x" vedle popisu úkolu
 function odstranUkol() {
